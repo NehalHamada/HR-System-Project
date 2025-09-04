@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HR System" />
+    <meta name="keywords" content="HTML, CSS, JavaScript ,bootstrap,jquery-3" />
+    <title>Attendence</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <!-- page style -->
+    <link rel="stylesheet" href="../assets/css/employee/attendence.css" />
+    <!-- font family -->
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg fade p-0 sticky-top">
+        <div
+          class="container d-flex justify-content-between align-items-center rounded-2">
+          <div class="logo d-flex align-items-center">
+            <img
+              src="../assets/images/logo.jpg"
+              class="img-fluid rounded-3"
+              alt="Logo" />
+            <h3 class="ms-2 mb-0">Attendance</h3>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse text-center"
+            id="navbarTogglerDemo03">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#attendence">Attendance</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="task.html">Tasks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="request.html">Requests</a>
+              </li>
+            </ul>
+            <div class="dark-log d-flex m-3 justify-content-center">
+              <button id="logbtn" class="btn" title="logout">
+                <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+              </button>
+
+              <button id="themeToggle" class="btn" title="darktheme">
+                <i id="themeIcon" class="fa-solid fa-moon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- cards -->
+      <section class="card-det mt-5" id="attendence">
+        <div class="container">
+          <!-- text section -->
+          <!-- make with js -->
+          <div class="text text-center fade">
+            <h3 class="mb-0 welcome-head"></h3>
+
+            <div class="email-title mt-1">
+              <i class="fa-regular fa-envelope"></i>
+              <!-- make with js -->
+              <a
+                href="mailto:nehalhamada3@gmail.com"
+                class="ms-2 text-decoration-none emp-mail"
+                title="mail"></a>
+            </div>
+            <div class="job-title mt-1">
+              <i class="fa-solid fa-briefcase"></i>
+              <!-- make with js -->
+              <span class="ms-2 mb-0 emp-spetial"></span>
+            </div>
+          </div>
+
+          <!-- cards for Details -->
+          <div class="detailed-cards mt-4 fade">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+              <!-- card 1 -->
+              <div class="col">
+                <div class="card card-one rounded">
+                  <div class="card-body">
+                    <div class="calendar">
+                      <div class="calendar-header">
+                        <h5 id="monthYear"></h5>
+                        <div class="calendar-nav">
+                          <button id="prev">&lt;</button>
+                          <button id="next">&gt;</button>
+                        </div>
+                      </div>
+                      <table class="calendar-table w-100">
+                        <thead>
+                          <tr>
+                            <th>Su</th>
+                            <th>Mo</th>
+                            <th>Tu</th>
+                            <th>We</th>
+                            <th>Th</th>
+                            <th>Fr</th>
+                            <th>Sa</th>
+                          </tr>
+                        </thead>
+                        <tbody id="calendar-body">
+                          <!-- Make with js-->
+                        </tbody>
+                      </table>
+                      <div id="selected-info">Selected: —</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 2 -->
+              <div class="col">
+                <div class="card p-3 card-two">
+                  <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <!-- card 1 -->
+                    <div class="col">
+                      <div class="card card-two-one shadow">
+                        <div class="card-body">
+                          <p class="card-text">Total Present</p>
+                          <h5
+                            class="data-card card-title fw-bold"
+                            data-key="present"></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="col">
+                      <div class="card card-two-one shadow">
+                        <div class="card-body">
+                          <p class="card-text">Total Late</p>
+                          <h5
+                            class="data-card card-title fw-bold"
+                            data-key="late"></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="col">
+                      <div class="card card-two-one shadow">
+                        <div class="card-body">
+                          <p class="card-text">Total Absence</p>
+                          <h5
+                            class="data-card card-title fw-bold"
+                            data-key="absent"></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="col">
+                      <div class="card card-two-one shadow">
+                        <div class="card-body">
+                          <p class="card-text">Total WFH</p>
+                          <h5
+                            class="data-card card-title fw-bold"
+                            data-key="wfh"></h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Attendance -->
+      <section class="table-atten fade">
+        <div class="container">
+          <div class="table-responsive atten-table">
+            <!-- Attendence Table -->
+            <table
+              class="table mt-5 rounded fade"
+              id="attendance-table"></table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="d-flex justify-content-center align-items-center text-white py-2 text-center">
+      <p class="mb-0 flex-grow-1">created by HMMN &copy; ITI 2025</p>
+    </footer>
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script type="module" src="../assets/js/employee/attendence.js"></script>
+  </body>
+</html>

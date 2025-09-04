@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "employeeId": 1,
+    "name": "Ahmed Mostafa",
+    "description": "Complete assigned work package",
+    "status": "Completed",
+    "dueDate": "2025-08-20"
+  },
+  {
+    "id": 2,
+    "employeeId": 2,
+    "name": "Noha Ali",
+    "description": "Prepare monthly financial report",
+    "status": "Pending",
+    "dueDate": "2025-08-22"
+  },
+  {
+    "id": 3,
+    "employeeId": 3,
+    "name": "Khaled Gamal",
+    "description": "Update client documentation",
+    "status": "In Progress",
+    "dueDate": "2025-08-25"
+  },
+  {
+    "id": 4,
+    "employeeId": 4,
+    "name": "Sara Hassan",
+    "description": "Develop new feature module",
+    "status": "Completed",
+    "dueDate": "2025-08-28"
+  },
+  {
+    "id": 5,
+    "employeeId": 16,
+    "name": "Mona Reda",
+    "description": "Fix reported bugs in system",
+    "status": "In Progress",
+    "dueDate": "2025-08-30"
+  },
+  {
+    "id": 6,
+    "employeeId": 17,
+    "name": "Fady Sameh",
+    "description": "Conduct market research",
+    "status": "Pending",  
+    "dueDate": "2025-09-01"
+  },
+  {
+    "id": 7,
+    "employeeId": 7,
+    "name": "Omar Yasser",
+    "description": "Optimize database queries",
+    "status": "Completed",
+    "dueDate": "2025-09-02"
+  },
+  {
+    "id": 8,
+    "employeeId": 18,
+    "name": "Heba Mohamed",
+    "description": "Design UI mockups",
+    "status": "Pending",
+    "dueDate": "2025-09-03"
+  },
+  {
+    "id": 9,
+    "employeeId": 20,
+    "name": "Youssef Adel",
+    "description": "Test new system features",
+    "status": "In Progress",
+    "dueDate": "2025-09-04"
+  },
+  {
+    "id": 10,
+    "employeeId": 10,
+    "name": "Dina Samir",
+    "description": "Organize training session",
+    "status": "Completed",
+    "dueDate": "2025-09-05"
+  },
+  {
+    "id": 11,
+    "employeeId": 11,
+    "name": "Mahmoud Fathi",
+    "description": "Prepare marketing presentation",
+    "status": "Pending",
+    "dueDate": "2025-09-06"
+  },
+  {
+    "id": 12,
+    "employeeId": 12,
+    "name": "Laila Omar",
+    "description": "Update employee records",
+    "status": "In Progress",
+    "dueDate": "2025-09-07"
+  },
+  {
+    "id": 13,
+    "employeeId": 13,
+    "name": "Tamer Hany",
+    "description": "Prepare quarterly budget",
+    "status": "Completed",
+    "dueDate": "2025-09-08"
+  },
+  {
+    "id": 14,
+    "employeeId": 14,
+    "name": "Rana Essam",
+    "description": "Write technical documentation",
+    "status": "Pending",
+    "dueDate": "2025-09-09"
+  },
+  {
+    "id": 15,
+    "employeeId": 15,
+    "name": "Mostafa Nabil",
+    "description": "Implement security patch",
+    "status": "In Progress",
+    "dueDate": "2025-09-10"
+  }
+]

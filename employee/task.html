@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HR System" />
+    <meta name="keywords" content="HTML, CSS, JavaScript ,bootstrap,jquery-3" />
+    <title>Tasks</title>
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/employee/tasks.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg fade p-0 sticky-top">
+        <div
+          class="container d-flex justify-content-between align-items-center rounded-2">
+          <div class="logo d-flex align-items-center">
+            <img
+              src="../assets/images/logo.jpg"
+              class="img-fluid rounded-3"
+              alt="Logo" />
+            <h3 class="ms-2 mb-0">Tasks</h3>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse text-center"
+            id="navbarTogglerDemo03">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="attendence.html">Attendance</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#task">Tasks</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="request.html">Requests</a>
+              </li>
+            </ul>
+            <div class="dark-log d-flex m-3 justify-content-center">
+              <button id="logbtn" class="btn" title="logout">
+                <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+              </button>
+
+              <button id="themeToggle" class="btn" title="darktheme">
+                <i id="themeIcon" class="fa-solid fa-moon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="tasks m-4 fade" id="task">
+        <div class="container">
+          <div class="">
+            <h2 class="rounded p-1">My Tasks</h2>
+          </div>
+          <div class="table-responsive atten-table">
+            <!-- Tasks Table -->
+            <table id="tasksTable" class="table rounded"></table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="d-flex justify-content-center align-items-center text-white py-2 fixed-bottom text-center">
+      <p class="mb-0 flex-grow-1">created by HMMN &copy; ITI 2025</p>
+    </footer>
+
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script type="module" src="../assets/js/employee/tasks.js"></script>
+  </body>
+</html>
