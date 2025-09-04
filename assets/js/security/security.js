@@ -111,7 +111,9 @@ function updateInputs() {
 // GET DATA FROM JSON
 async function getUser() {
   try {
-    const res = await fetch(`../assets/js/json/attendance_single_day.json`);
+    const res = await fetch(
+      "https://nehalhamada.github.io/HR-System-Project/assets/js/json/attendance_single_day.json"
+    );
     const data = await res.json();
 
     employeesAttendanceInfo = [...data];
@@ -123,7 +125,9 @@ async function getUser() {
 }
 async function getAttendanceRecord() {
   try {
-    const res = await fetch(`../assets/js/json/attendance-record.json`);
+    const res = await fetch(
+      "https://nehalhamada.github.io/HR-System-Project/assets/js/json/attendance-record.json"
+    );
     const data = await res.json();
     AttendanceRecord = [...data];
     console.log(AttendanceRecord);

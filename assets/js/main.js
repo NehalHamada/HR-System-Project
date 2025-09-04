@@ -96,13 +96,13 @@ submit.addEventListener("click", (e) => {
       .then((res) => res.json())
       .then((employees) => {
         if (getEmployee(employees, "Manager")) {
-          window.location = "../../manager/manager.html";
+          window.location = "./manager/manager.html";
         } else if (getEmployee(employees, "Employee")) {
-          window.location = "../../employee/attendence.html";
+          window.location = "./employee/attendence.html";
         } else if (getEmployee(employees, "Security")) {
-          window.location = "../../security/security.html";
+          window.location = "./security/security.html";
         } else if (getEmployee(employees, "HR")) {
-          window.location = "../../admin/admin.html";
+          window.location = "./admin/admin.html";
         }
         /* clear Data */
         clearData();
