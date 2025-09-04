@@ -10,7 +10,6 @@ const errorPasswordSpace = document.getElementById("errorPasswordSpace");
 const errorPasswordChar = document.getElementById("errorPasswordChar");
 //  console.log(errorPasswordChar);
 
-
 /* dark mood */
 btn.addEventListener("click", () => {
   if (html.getAttribute("data-bs-theme") === "dark") {
@@ -29,19 +28,16 @@ const validateEmail = (val, errorMessage, errorMessage2) => {
     errorMessage.classList.remove("d-none");
     errorMessage2.classList.add("d-none");
     return false;
-
   } else if (!regex.test(val)) {
     errorMessage2.classList.remove("d-none");
     errorMessage.classList.add("d-none");
     return false;
-  }
-  else {
+  } else {
     errorMessage.classList.add("d-none");
     errorMessage2.classList.add("d-none");
     return true;
   }
-
-}
+};
 
 /* validate password */
 const validatePassword = (val, errorMessage, errorMessage2) => {
@@ -49,49 +45,56 @@ const validatePassword = (val, errorMessage, errorMessage2) => {
     errorMessage.classList.remove("d-none");
     errorMessage2.classList.add("d-none");
     return false;
-
   } else if (val.length <= 6) {
     errorMessage2.classList.remove("d-none");
     errorMessage.classList.add("d-none");
     return false;
-  }
-  else {
+  } else {
     errorMessage2.classList.add("d-none");
     errorMessage.classList.add("d-none");
     return true;
   }
-
-}
+};
 
 /* clear Data */
 const clearData = () => {
-  valEmail.value = ""
+  valEmail.value = "";
   valPassword.value = "";
-}
+};
 
 /* fun  get  employee AND put in localStorage */
 const getEmployee = (employee, enterRole) => {
   let welcomeEmployee = employee.find(
-    (em) => em.email.toLowerCase().trim() === valEmail.value.toLowerCase().trim() &&
+    (em) =>
+      em.email.toLowerCase().trim() === valEmail.value.toLowerCase().trim() &&
       em.role === enterRole
   );
   if (welcomeEmployee) {
     localStorage.setItem("employee", JSON.stringify(welcomeEmployee));
   }
   return welcomeEmployee;
-}
+};
 
 /* validation login */
 
 submit.addEventListener("click", (e) => {
   e.preventDefault();
-  let testEmail = validateEmail(valEmail.value, errorEmailSpace, errorEmailRegix);
-  let testPassword = validatePassword(valPassword.value, errorPasswordSpace, errorPasswordChar);
+  let testEmail = validateEmail(
+    valEmail.value,
+    errorEmailSpace,
+    errorEmailRegix
+  );
+  let testPassword = validatePassword(
+    valPassword.value,
+    errorPasswordSpace,
+    errorPasswordChar
+  );
   if (testEmail && testPassword) {
-
-    fetch("../../assets/js/json/employee.json")
-      .then(res => res.json())
-      .then(employees => {
+    fetch(
+      "https://nehalhamada.github.io/HR-System-Project/assets/js/json/employee.json"
+    )
+      .then((res) => res.json())
+      .then((employees) => {
         if (getEmployee(employees, "Manager")) {
           window.location = "../../manager/manager.html";
         } else if (getEmployee(employees, "Employee")) {
@@ -103,28 +106,7 @@ submit.addEventListener("click", (e) => {
         }
         /* clear Data */
         clearData();
-
       })
-      .catch(err => console.error(err));
-
+      .catch((err) => console.error(err));
   }
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
