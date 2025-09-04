@@ -2,7 +2,7 @@ import {
   fetchEmployee,
   setItem,
   getItem,
-} from "../../../assets/js/exportFun.js";
+} from "./assets/js/exportFun.js";
 const html = document.documentElement;
 const btn = document.getElementById("toggleTheme");
 const tBody = document.getElementById("tBody");
@@ -37,7 +37,7 @@ const editErrorId = document.getElementById("editErrorId");
 /* logOut */
 logoutIcon.addEventListener("click", () => {
   localStorage.removeItem("employee");
-  window.location = "../../../index.html";
+  window.location = "./index.html";
 });
 /* validate name */
 function validateName(input, errorEl) {
@@ -74,7 +74,7 @@ function validateId(input, errorEl) {
 }
 
 /* tasks */
-let dataTasks = await fetchEmployee("/assets/js/json/tasks.json");
+let dataTasks = await fetchEmployee("./assets/js/json/tasks.json");
 setItem("allTasks", dataTasks);
 let localTasks = getItem("allTasks");
 displayData(localTasks);
@@ -88,7 +88,7 @@ function displayData(arr) {
               <td>${el.description}</td>
               <td>${el.name}</td>
               <td>${el.dueDate}</td>
-                 <td>
+                <td>
                     <span class="px-2 py-1 special-status rounded ${
                       el.status === "Pending"
                         ? "bg-warning"

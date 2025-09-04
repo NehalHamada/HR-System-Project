@@ -24,7 +24,7 @@ btn.addEventListener("click", () => {
 // logout start
 let logOutButton = document.querySelector("#logBtn");
 logOutButton.addEventListener("click", (e) => {
-  window.location.href = "../../../index.html";
+  window.location.href = "./index.html";
 });
 // logout end
 

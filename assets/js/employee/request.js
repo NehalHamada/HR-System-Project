@@ -2,7 +2,7 @@ import {
   fetchEmployee,
   getItem,
   setItem,
-} from "../../../assets/js/exportFun.js";
+} from "./assets/js/exportFun.js";
 
 // fetch or load from localStorage
 async function fetchedData() {
@@ -11,7 +11,7 @@ async function fetchedData() {
 
     if (!allRequests) {
       allRequests = await fetchEmployee(
-        "../../../assets/js/json/requests.json"
+        "./assets/js/json/requests.json"
       );
       setItem("allRequests", allRequests);
     }
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
 let logoutButton = document.querySelector("#logbtn");
 logoutButton.addEventListener("click", (e) => {
   localStorage.removeItem("employee");
-  window.location = "../../../index.html";
+  window.location = "./index.html";
 });
 
 // Dark Mode Toggle

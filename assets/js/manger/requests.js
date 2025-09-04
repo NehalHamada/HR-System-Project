@@ -2,7 +2,7 @@ import {
   fetchEmployee,
   getItem,
   setItem,
-} from "../../../assets/js/exportFun.js";
+} from "./assets/js/exportFun.js";
 
 let allRequestsData = [];
 let currentPage = 1;
@@ -26,12 +26,12 @@ async function fetchedData() {
   try {
     let allRequests = getItem("allRequests");
     if (!allRequests) {
-      allRequests = await fetchEmployee("../../../assets/js/json/requests.json");
+      allRequests = await fetchEmployee("./assets/js/json/requests.json");
     }
 
     let allEmployees = getItem("allEmployees");
     if (!allEmployees) {
-      allEmployees = await fetchEmployee("../../../assets/js/json/employee.json");
+      allEmployees = await fetchEmployee("./assets/js/json/employee.json");
       setItem("allEmployees", allEmployees);
     }
 
@@ -280,7 +280,7 @@ const btn = document.getElementById("toggleTheme");
 const logoutIcon = document.querySelector(".logoutIcon");
 logoutIcon.addEventListener("click", () => {
   localStorage.removeItem("employee");
-  window.location = "../../../index.html";
+  window.location = "./index.html";
 });
 
 const savedTheme = localStorage.getItem("theme") || "light";

@@ -91,7 +91,7 @@ submit.addEventListener("click", (e) => {
   );
   if (testEmail && testPassword) {
     fetch(
-      "https://nehalhamada.github.io/HR-System-Project/assets/js/json/employee.json"
+      "./assets/js/json/employee.json"
     )
       .then((res) => res.json())
       .then((employees) => {

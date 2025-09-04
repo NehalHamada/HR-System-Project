@@ -1,12 +1,10 @@
-import { fetchEmployee } from "../../../assets/js/exportFun.js";
+import { fetchEmployee, getItem, setItem } from "./assets/js/exportFun.js";
 // add tasks to Table from json
 
 async function getTask() {
   try {
-    let getData = await fetchEmployee(
-      "../../../assets/js/json/personalTasks.json"
-    );
-    let loggedEmployee = JSON.parse(localStorage.getItem("employee"));
+    let getData = await fetchEmployee("./assets/js/json/personalTasks.json");
+    let loggedEmployee = getItem("employee");
     let allTasks = getData.filter((t) => t.employeeId === loggedEmployee.id);
     createTable(allTasks);
     return allTasks;
@@ -125,7 +123,7 @@ getTask();
 let logoutButton = document.querySelector("#logbtn");
 logoutButton.addEventListener("click", (e) => {
   localStorage.removeItem("employee");
-  window.location = "../../../index.html";
+  window.location = "./index.html";
 });
 
 // Dark Mode Toggle

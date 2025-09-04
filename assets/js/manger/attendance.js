@@ -2,7 +2,7 @@ import {
   fetchEmployee,
   setItem,
   getItem,
-} from "../../../assets/js/exportFun.js";
+} from "./assets/js/exportFun.js";
 
 const html = document.documentElement;
 const btn = document.getElementById("toggleTheme");
@@ -72,7 +72,7 @@ async function calculateSalaries() {
 
 logoutIcon.addEventListener("click", () => {
   localStorage.removeItem("employee");
-  window.location.replace("../../../index.html");
+  window.location.replace("./index.html");
 });
 
 function displayData(arr) {

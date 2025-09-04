@@ -2,7 +2,7 @@ import {
   fetchEmployee,
   setItem,
   getItem,
-} from "../../../assets/js/exportFun.js";
+} from "./assets/js/exportFun.js";
 
 const html = document.documentElement;
 const themeToggleButton = document.getElementById("toggleTheme");
@@ -18,7 +18,7 @@ themeToggleButton.addEventListener("click", () => {
 
 logOutButton.addEventListener("click", () => {
   localStorage.removeItem("employee");
-  window.open("../../../index.html", "_self");
+  window.open("./index.html");
 });
 
 function exportTable(tableId, fileName, format) {
@@ -160,7 +160,7 @@ Object.values(employeeStats).forEach((emp) => {
 });
 
 
-fetch("/assets/js/json/personalTasks.json")
+fetch("./assets/js/json/personalTasks.json")
   .then((response) => response.json())
   .then((tasks) => {
     const employeesStats = {};

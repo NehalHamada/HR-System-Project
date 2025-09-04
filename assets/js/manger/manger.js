@@ -1,4 +1,4 @@
-import { fetchEmployee, setItem, getItem } from "../../../assets/js/exportFun.js";
+import { fetchEmployee, setItem, getItem } from "./assets/js/exportFun.js";
 const html = document.documentElement;
 const btn = document.getElementById("toggleTheme");
 const numEmployee = document.getElementById("numEmployee");
@@ -11,7 +11,7 @@ const logoutIcon = document.querySelector(".logoutIcon");
 
 
 /* employee */
-let employees = await fetchEmployee("/assets/js/json/employee.json");
+let employees = await fetchEmployee("./assets/js/json/employee.json");
 numEmployee.innerHTML = employees.length;
 displayData(employees);
 
@@ -59,6 +59,6 @@ btn.addEventListener("click", () => {
 /* logOut */
 logoutIcon.addEventListener("click",()=>{
   localStorage.removeItem("employee");
-  window.location="../../../index.html"
+  window.location="./index.html"
 })
 

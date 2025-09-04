@@ -1,12 +1,8 @@
-import {
-  fetchEmployee,
-  getItem,
-  setItem,
-} from "../../../assets/js/exportFun.js";
+import { fetchEmployee, getItem, setItem } from "./assets/js/exportFun.js";
 
-   let allData =getItem("AttendanceRecord");
-   console.log(allData);
-   
+let allData = getItem("AttendanceRecord");
+console.log(allData);
+
 // get employee data
 async function getEmp() {
   try {
@@ -27,7 +23,6 @@ async function getEmp() {
 
 async function getAttendData() {
   try {
-
     let empData = getItem("employee");
     if (!empData) {
       console.error("No employee is logged in.");
@@ -316,7 +311,7 @@ function cardData(records) {
     absent: absentCount,
     wfh: wfhCount,
   };
-  
+
   // bring data from key and put it in h5
   cards.forEach((el) => {
     let key = el.dataset.key;
@@ -330,7 +325,7 @@ function cardData(records) {
 let logoutButton = document.querySelector("#logbtn");
 logoutButton.addEventListener("click", (e) => {
   localStorage.removeItem("employee");
-  window.location = "../../../index.html";
+  window.location = "./index.html";
 });
 
 // dark Mode
@@ -359,4 +354,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 getAttendData();
 getEmp();
-

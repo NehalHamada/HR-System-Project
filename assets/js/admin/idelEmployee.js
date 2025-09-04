@@ -1,4 +1,4 @@
-import { getItem } from "../../../assets/js/exportFun.js";
+import { getItem } from "./assets/js/exportFun.js";
 
 const logoutIcon = document.querySelector(".logoutIcon");
 const html = document.documentElement;
@@ -8,7 +8,7 @@ const idealEmployeeList = document.getElementById("idealEmployeeList");
 // Logout
 logoutIcon.addEventListener("click", () => {
   localStorage.removeItem("employee");
-  window.location.replace("../../../index.html");
+  window.location.replace("./index.html");
 });
 
 // Get ideal employees (no penalties + has bonus)
