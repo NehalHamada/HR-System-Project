@@ -6,7 +6,7 @@ async function fetchedData() {
     let allRequests = getItem("allRequests");
 
     if (!allRequests) {
-      allRequests = await fetchEmployee("./assets/js/json/requests.json");
+      allRequests = await fetchEmployee("../js/json/requests.json");
       setItem("allRequests", allRequests);
     }
 

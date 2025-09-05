@@ -71,7 +71,7 @@ function validateId(input, errorEl) {
 }
 
 /* tasks */
-let dataTasks = await fetchEmployee("./assets/js/json/tasks.json");
+let dataTasks = await fetchEmployee("../js/json//tasks.json");
 setItem("allTasks", dataTasks);
 let localTasks = getItem("allTasks");
 displayData(localTasks);
