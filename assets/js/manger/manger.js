@@ -9,7 +9,7 @@ const search = document.getElementById("search");
 const logoutIcon = document.querySelector(".logoutIcon");
 
 /* employee */
-let employees = await fetchEmployee("../json/employee.json");
+let employees = await fetchEmployee("../assets/js/json/employee.json");
 numEmployee.innerHTML = employees.length;
 displayData(employees);
 

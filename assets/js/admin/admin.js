@@ -153,7 +153,7 @@ Object.values(employeeStats).forEach((emp) => {
   tableBody.insertAdjacentHTML("beforeend", row);
 });
 
-fetch("../json/personalTasks.json")
+fetch("../assets/js/json/personalTasks.json")
   .then((response) => response.json())
   .then((tasks) => {
     const employeesStats = {};

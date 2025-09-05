@@ -90,11 +90,11 @@ submit.addEventListener("click", (e) => {
     errorPasswordChar
   );
   if (testEmail && testPassword) {
-    fetch("./json/employee.json")
+    fetch("./assets/js/json/employee.json")
       .then((res) => res.json())
       .then((employees) => {
         if (getEmployee(employees, "Manager")) {
-          window.location = "./manager/manager.html";
+          window.location = "./manger/manger.js";
         } else if (getEmployee(employees, "Employee")) {
           window.location = "./employee/attendence.html";
         } else if (getEmployee(employees, "Security")) {
