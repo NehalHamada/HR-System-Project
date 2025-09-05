@@ -1,4 +1,4 @@
-import { fetchEmployee, setItem, getItem } from "./assets/js/exportFun.js";
+import { fetchEmployee, getItem, setItem } from "./exportFun.js";
 const html = document.documentElement;
 const btn = document.getElementById("toggleTheme");
 const numEmployee = document.getElementById("numEmployee");
@@ -8,8 +8,6 @@ const tBody = document.getElementById("tBody");
 const search = document.getElementById("search");
 const logoutIcon = document.querySelector(".logoutIcon");
 
-
-
 /* employee */
 let employees = await fetchEmployee("./assets/js/json/employee.json");
 numEmployee.innerHTML = employees.length;
@@ -17,7 +15,7 @@ displayData(employees);
 
 /* tasks */
 let localTasks = getItem("allTasks");
-numTasks.innerHTML = localTasks?localTasks.length:15;
+numTasks.innerHTML = localTasks ? localTasks.length : 15;
 
 /* requests */
 let localRequest = getItem("allRequests");
@@ -26,24 +24,25 @@ numRequests.innerHTML = localRequest.length;
 /* DISPLAY EMPLOYEE */
 function displayData(arr) {
   let emp = "";
-  arr.map(el => {
+  arr.map((el) => {
     emp += `   <tr>
               <td>${el.id}</td>
               <td>${el.name}</td>
               <td>${el.department}</td>
               <td>${el.role}</td>
-            </tr>`
-  })
+            </tr>`;
+  });
   tBody.innerHTML = emp;
 }
 
 /* search */
 search.addEventListener("input", (e) => {
   e.preventDefault();
-  let arrFilter = employees.filter(el => el.name.toLowerCase().includes(search.value.toLowerCase()));
+  let arrFilter = employees.filter((el) =>
+    el.name.toLowerCase().includes(search.value.toLowerCase())
+  );
   displayData(arrFilter);
-})
-
+});
 
 /* dark mode */
 html.setAttribute("data-bs-theme", "light");
@@ -57,8 +56,7 @@ btn.addEventListener("click", () => {
 });
 
 /* logOut */
-logoutIcon.addEventListener("click",()=>{
+logoutIcon.addEventListener("click", () => {
   localStorage.removeItem("employee");
-  window.location="./index.html"
-})
-
+  window.location = "./index.html";
+});

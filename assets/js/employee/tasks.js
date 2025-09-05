@@ -1,4 +1,4 @@
-import { fetchEmployee, getItem, setItem } from "./assets/js/exportFun.js";
+import { fetchEmployee, getItem, setItem } from "./exportFun.js";
 // add tasks to Table from json
 
 async function getTask() {

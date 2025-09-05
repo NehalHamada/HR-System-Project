@@ -1,8 +1,4 @@
-import {
-  fetchEmployee,
-  setItem,
-  getItem,
-} from "./assets/js/exportFun.js";
+import { fetchEmployee, getItem, setItem } from "./exportFun.js";
 
 const html = document.documentElement;
 const themeToggleButton = document.getElementById("toggleTheme");
@@ -56,7 +52,6 @@ document.getElementById("exportpdf2Btn").addEventListener("click", () => {
   doc.save("data.pdf");
 });
 
-
 let records = getItem("AttendanceRecord");
 let presentCount = 0;
 let absentCount = 0;
@@ -108,7 +103,6 @@ if (payrollImpactElement) {
   payrollImpactElement.textContent = `$${totalPayroll.toLocaleString()}`;
 }
 
-
 const employeeStats = {};
 
 records.forEach((rec) => {
@@ -158,7 +152,6 @@ Object.values(employeeStats).forEach((emp) => {
       `;
   tableBody.insertAdjacentHTML("beforeend", row);
 });
-
 
 fetch("./assets/js/json/personalTasks.json")
   .then((response) => response.json())

@@ -1,8 +1,5 @@
-import {
-  fetchEmployee,
-  setItem,
-  getItem,
-} from "./assets/js/exportFun.js";
+import { fetchEmployee, getItem, setItem } from "./exportFun.js";
+
 const html = document.documentElement;
 const btn = document.getElementById("toggleTheme");
 const tBody = document.getElementById("tBody");

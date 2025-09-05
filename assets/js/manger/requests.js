@@ -1,15 +1,12 @@
-import {
-  fetchEmployee,
-  getItem,
-  setItem,
-} from "./assets/js/exportFun.js";
+import { fetchEmployee, getItem, setItem } from "./exportFun.js";
 
 let allRequestsData = [];
 let currentPage = 1;
 const rowsPerPage = 10;
 
 const paginationWrapper = document.getElementById("pagination-wrapper");
-const tableBody = document.querySelector("#request-table tbody") || createTbody();
+const tableBody =
+  document.querySelector("#request-table tbody") || createTbody();
 
 function createTbody() {
   const table = document.querySelector("#request-table");
@@ -63,7 +60,15 @@ function createTable(requests) {
     let tableHeader = document.createElement("thead");
     let tableHeadRow = document.createElement("tr");
     tableHeadRow.classList.add("text-nowrap", "text-center");
-    let headers = ["ID", "Employee Name", "Department", "Request Type", "Date", "Status", "Action"];
+    let headers = [
+      "ID",
+      "Employee Name",
+      "Department",
+      "Request Type",
+      "Date",
+      "Status",
+      "Action",
+    ];
     headers.forEach((text) => {
       let th = document.createElement("th");
       th.textContent = text;
@@ -82,11 +87,17 @@ function createTable(requests) {
       <td>${request.employeeId}</td>
       <td>${request.employeeName || "Unknown"}</td>
       <td>${request.department || "N/A"}</td>
-      <td>${request.type}<br/><small style='color:grey'>${request.notes || ""}</small></td>
+      <td>${request.type}<br/><small style='color:grey'>${
+      request.notes || ""
+    }</small></td>
       <td>${request.date}</td>
       <td>
         <span style="font-weight: bold; padding: 5px; border-radius: 5px; background-color: ${
-          request.status === "Approved" ? "#198754" : request.status === "Rejected" ? "#dc3545" : "#ffc107"
+          request.status === "Approved"
+            ? "#198754"
+            : request.status === "Rejected"
+            ? "#dc3545"
+            : "#ffc107"
         };">${request.status}</span>
       </td>
       <td>
@@ -94,7 +105,7 @@ function createTable(requests) {
         <button class="reject" style="border: none; background-color: #dc3545; margin: 5px; border-radius: 5px;">Reject</button>
       </td>
     `;
-    
+
     tbody.appendChild(row);
 
     if (request.status !== "Pending") {
@@ -193,7 +204,7 @@ function updateRequestStatus(requestId, newStatus) {
   let requests = getItem("allRequests") || [];
   let requestUpdated = null;
 
-  const updatedRequests = requests.map(r => {
+  const updatedRequests = requests.map((r) => {
     if (r.id === requestId) {
       requestUpdated = { ...r, status: newStatus };
       return requestUpdated;
@@ -204,7 +215,7 @@ function updateRequestStatus(requestId, newStatus) {
   if (requestUpdated) {
     setItem("allRequests", updatedRequests);
   }
-  
+
   return requestUpdated;
 }
 

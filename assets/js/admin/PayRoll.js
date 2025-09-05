@@ -1,4 +1,4 @@
-import { fetchEmployee, setItem, getItem } from "./assets/js/exportFun.js";
+import { fetchEmployee, getItem, setItem } from "./exportFun.js";
 
 // dark mode staart
 const html = document.documentElement;

@@ -1,4 +1,4 @@
-import { getItem } from "./assets/js/exportFun.js";
+import { fetchEmployee, getItem, setItem } from "./exportFun.js";
 
 const logoutIcon = document.querySelector(".logoutIcon");
 const html = document.documentElement;
@@ -14,7 +14,9 @@ logoutIcon.addEventListener("click", () => {
 // Get ideal employees (no penalties + has bonus)
 function getIdealEmployees() {
   const allEmployees = getItem("allEmployees") || [];
-  return allEmployees.filter(emp => Number(emp.Penalties) === 0 && Number(emp.Bonus) > 0);
+  return allEmployees.filter(
+    (emp) => Number(emp.Penalties) === 0 && Number(emp.Bonus) > 0
+  );
 }
 
 // Display ideal employees in list
@@ -37,10 +39,12 @@ Marketing
         </div>
       </li>
     `;
-    return; 
+    return;
   }
 
-  idealEmployeeList.innerHTML = employees.map(emp => `
+  idealEmployeeList.innerHTML = employees
+    .map(
+      (emp) => `
     <li class="list-group-item shadow-sm border-0 rounded-3 mb-3 p-3 d-flex flex-column align-items-center text-center highlighted-employee">
       <div class="mb-2">
         <i class="fa-solid fa-star text-warning fs-5 me-2"></i>
@@ -54,7 +58,9 @@ Marketing
         <span class="badge bg-dark">Net: ${emp.NetSalary}</span>
       </div>
     </li>
-  `).join("");
+  `
+    )
+    .join("");
 }
 
 // Theme toggle

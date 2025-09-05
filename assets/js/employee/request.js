@@ -1,8 +1,4 @@
-import {
-  fetchEmployee,
-  getItem,
-  setItem,
-} from "./assets/js/exportFun.js";
+import { fetchEmployee, getItem, setItem } from "./exportFun.js";
 
 // fetch or load from localStorage
 async function fetchedData() {
@@ -10,9 +6,7 @@ async function fetchedData() {
     let allRequests = getItem("allRequests");
 
     if (!allRequests) {
-      allRequests = await fetchEmployee(
-        "./assets/js/json/requests.json"
-      );
+      allRequests = await fetchEmployee("./assets/js/json/requests.json");
       setItem("allRequests", allRequests);
     }
 

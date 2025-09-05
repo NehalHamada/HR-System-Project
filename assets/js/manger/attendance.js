@@ -1,8 +1,4 @@
-import {
-  fetchEmployee,
-  setItem,
-  getItem,
-} from "./assets/js/exportFun.js";
+import { fetchEmployee, getItem, setItem } from "./exportFun.js";
 
 const html = document.documentElement;
 const btn = document.getElementById("toggleTheme");
@@ -146,7 +142,9 @@ function updatePage() {
   const pageButtons = document.querySelectorAll(".page-item");
   pageButtons.forEach((button) => {
     button.classList.remove("active");
-    if (parseInt(button.querySelector(".page-link").innerText) === currentPage) {
+    if (
+      parseInt(button.querySelector(".page-link").innerText) === currentPage
+    ) {
       button.classList.add("active");
     }
   });
