@@ -1,4 +1,4 @@
-import { fetchEmployee, getItem, setItem } from "./exportFun.js";
+import { fetchEmployee, getItem, setItem } from "../exportFun.js";
 
 let allData = getItem("AttendanceRecord");
 console.log(allData);
