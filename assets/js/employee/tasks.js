@@ -3,7 +3,7 @@ import { fetchEmployee, getItem, setItem } from "./exportFun.js";
 
 async function getTask() {
   try {
-    let getData = await fetchEmployee("../js/json/personalTasks.json");
+    let getData = await fetchEmployee("../json/personalTasks.json");
     let loggedEmployee = getItem("employee");
     let allTasks = getData.filter((t) => t.employeeId === loggedEmployee.id);
     createTable(allTasks);

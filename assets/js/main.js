@@ -90,7 +90,7 @@ submit.addEventListener("click", (e) => {
     errorPasswordChar
   );
   if (testEmail && testPassword) {
-    fetch("../js/json/employee.json")
+    fetch("./json/employee.json")
       .then((res) => res.json())
       .then((employees) => {
         if (getEmployee(employees, "Manager")) {

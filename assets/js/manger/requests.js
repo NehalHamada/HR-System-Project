@@ -23,12 +23,12 @@ async function fetchedData() {
   try {
     let allRequests = getItem("allRequests");
     if (!allRequests) {
-      allRequests = await fetchEmployee("../js/json//requests.json");
+      allRequests = await fetchEmployee("../json/requests.json");
     }
 
     let allEmployees = getItem("allEmployees");
     if (!allEmployees) {
-      allEmployees = await fetchEmployee("../js/json//employee.json");
+      allEmployees = await fetchEmployee("../json/employee.json");
       setItem("allEmployees", allEmployees);
     }
 
